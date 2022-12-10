@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Site Info/Styles -->
+    <title>Hopper</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./images/hopper-favicon-32x32.png" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CDN's -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="hopping-fullscreen"></div>
+    <div class="start-screen">
+      <img
+        src="./images/hopper-logo.png"
+        alt="Hopper splash screen logo"
+        id="hopper-text-logo"
+      />
+      <form class="username-form">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter a username to start hopping!"
+          maxlength="24"
+          onkeydown="return /[a-zA-Z0-9]/i.test(event.key)"
+          autocomplete="off"
+          required
+        />
+        <button type="submit">
+          <img src="./images/hopper-icon-w500.png" alt="" />
+        </button>
+      </form>
+    </div>
+    <div class="main-screen">
+      <div class="prof-sect"></div>
+      <div class="action-sect">
+        <div class="action-cont">
+          <div class="selection-btns">
+            <button id="your-hops-btn" class="display-btn current-display">
+              Your Hops
+            </button>
+            <button id="liked-hops-btn" class="display-btn">Liked Hops</button>
+            <button id="seen-hops-btn" class="display-btn">Seen Hops</button>
+          </div>
+          <form id="post-form">
+            <textarea
+              name="post"
+              id="post"
+              placeholder="Write your next hop..."
+            ></textarea>
+            <button id="post-btn">Post Hop</button>
+          </form>
+        </div>
+        <div class="content-cont"></div>
+      </div>
+      <div class="hopper-sect">
+        <div class="logo-cont">
+          <img src="./images/hopper-icon-w500.png" alt="" />
+          <h1>Hopper</h1>
+        </div>
+        <button id="hopping-btn">Start Hopping</button>
+      </div>
+    </div>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
